@@ -1,0 +1,184 @@
+/* import de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* variaveis */
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan-blue: hsl(178, 100%, 50%);
+    --blue-main-bg: hsl(217, 54%, 11%);
+    --blue-card-bg: hsl(216, 50%, 16%);
+    --blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --outfit: 'Outfit', sans-serif;
+}
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--blue-main-bg);
+    font-family: var(--outfit);
+    color: var(--white);
+
+}
+
+.card{
+    max-width: 404.8px; 
+    background-color: var(--blue-card-bg);
+    padding: 1.7em;
+    border-radius: 15px;
+
+    box-shadow: 3px 3px 25px rgba(0,0,0,0.5);
+}
+
+.img__container{
+    position: relative;
+    border-radius: 10px;
+}
+
+.card__img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+
+    border-radius: 10px;
+}
+
+.card__view-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+
+    border-radius: 10px;
+
+    background: url(../images/icon-view.svg);
+    background-color: rgba(0, 255, 247, .5);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .3s all;
+}
+
+.card__view-icon:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.card h1, 
+.card__description,
+.card__details,
+.avatar-section {
+    width: 100%;
+}
+
+.card .title-link{
+    text-decoration: none;
+    color: var(--white);
+    transition: .5s all;
+}
+
+.card .title-link:hover {
+    color: var(--cyan-blue);
+    cursor: pointer;
+}
+
+.card h1 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: .7em;
+}
+
+
+.card__description {
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--soft-blue);
+    opacity: .7;
+
+    margin-bottom: 1em;
+
+}
+
+.card__details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid var(--blue-line);
+    margin-bottom: 1em;
+}
+
+.details__eth {
+    display: block;
+    width: 27%;
+    text-align: right;
+    color: var(--cyan-blue);
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+
+}
+
+.datails__daysleft{
+    display: block;
+    width: 28%;
+    text-align: right;
+    color: var(--soft-blue);
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.avatar-section{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.avatar-section img {
+    width: 12%;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+
+}
+
+.avatar-section p {
+    font-size: 1.1em;
+    font-weight: 300;
+    color: var(--soft-blue);
+    
+}
+
+.avatar-section p strong {
+    font-weight: 600;
+    color: var(--white);
+    opacity: .7;
+    transition: .5s all;
+}
+
+.avatar-link {
+    text-decoration: none;
+}
+
+.avatar-link strong:hover {
+    color: var(--cyan-blue);
+
+}
